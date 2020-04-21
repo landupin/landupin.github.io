@@ -1,15 +1,5 @@
-body {
-    background-image: url(back.jpg);
-    background-position-x: center;
-    background-size: auto 100vh;
-}
-
-/*@media (min-width:1200px){*/
-
-@media (min-aspect-ratio:16/9) {
-    body {
-        background-size: 100vw auto;
-    }
+* {
+    scroll-behavior: smooth;
 }
 
 h1, h3 {
@@ -21,10 +11,29 @@ h1 {
     font-family: "Monoton";
     font-size: 7rem;
     line-height: 150%;
+    margin-top: 0;
+}
+
+article {
+    height: 90vh;
+    padding: 2.8rem 0;
+    position: relative;
+}
+
+article.start {
+    background-image: url(back.jpg);
+    background-position-x: center;
+    background-size: auto 100vh;
+}
+
+@media (min-aspect-ratio:16/9) {
+    article.start {
+        background-size: 100vw auto;
+    }
 }
 
 .avatar {
-    position: fixed;
+    position: absolute;
     bottom: 3rem;
     right: 3rem;
     height: 14rem;
@@ -41,4 +50,32 @@ h1 {
     border: 3px solid white;
     border-radius: 50%;
     margin-left: 3rem;
+}
+
+article.second {
+    background-color: #051212;
+    color: white;
+    padding: 3.4rem 0;
+}
+
+article.second .float-up {
+    position: absolute;
+    bottom: -1.5rem;
+    right: 3rem;
+    height: 3rem;
+    width: 3rem;
+    background-color: #e3e3e3;
+    color: rgba(0, 0, 0, 0.87);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+footer {
+    height: 35vh;
+    background-color: #2b2d2f;
+    width: 100%;
+    border-bottom: 4rem solid #545658;
 }
